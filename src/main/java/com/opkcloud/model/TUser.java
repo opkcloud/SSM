@@ -6,10 +6,11 @@ package com.opkcloud.model;
  * @Description: com.opkcloud.model
  * @version: 1.0
  */
-public class User {
-
+public class TUser {
     private Integer id;
+
     private String name;
+
     private Integer age;
 
     public Integer getId() {
@@ -25,7 +26,7 @@ public class User {
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = name == null ? null : name.trim();
     }
 
     public Integer getAge() {
