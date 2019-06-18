@@ -14,21 +14,15 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 
 /**
- * @Auther: http://www.bjsxt.com
- * @Date: 2019/6/14
- * @Description: com.opkcloud.controller
- * @version: 1.0
+ * 搭建教程：https://blog.csdn.net/yeyazhishang/article/details/86650053
  */
 @Controller
 @RequestMapping("/user")
 public class UserController {
 
-    /**
-     * url: https://www.cnblogs.com/zyw-205520/p/4771253.html
-     */
     private static Logger logger = LoggerFactory.getLogger(UserController.class);
 
-    @Resource
+    @Autowired
     private UserService userService;
 
     @RequestMapping(value = "/getUserById", method = RequestMethod.GET)

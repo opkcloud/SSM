@@ -1,4 +1,4 @@
-package com.opkcloud.mapper;
+package com.opkcloud.dao;
 
 import com.opkcloud.model.TUser;
 import com.opkcloud.model.TUserExample;
@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * @Auther: http://www.bjsxt.com
  * @Date: 2019/6/14
- * @Description: com.opkcloud.mapper
+ * @Description: com.opkcloud.dao
  * @version: 1.0
  */
 public interface TUserMapper {
