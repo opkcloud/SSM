@@ -30,7 +30,7 @@ public class UserController {
 
     @RequestMapping(value = "/getUserById", method = RequestMethod.GET)
     @ApiOperation(value = "根据id查询用户信息", httpMethod = "GET", notes = "根据id查询用户信息")
-    public TUser getUserById(@ApiParam(name = "id", value = "用户id", required = true) int id) {
+    public TUser getUserById(@RequestParam int id) {
         return userService.getUserById(id);
     }
 
