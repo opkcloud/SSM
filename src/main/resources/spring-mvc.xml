@@ -19,4 +19,12 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
+    <bean class="com.opkcloud.util.SwaggerConfig"/>
+
+
+    <!--添加swagger配置-->
+    <!--<bean class="springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration" id="swagger2Config"/>
+    <mvc:resources location="classpath:/META-INF/resources/" mapping="swagger-ui.html"/>
+    <mvc:resources location="classpath:/META-INF/resources/webjars/" mapping="/webjars/**"/>-->
+
 </beans>
