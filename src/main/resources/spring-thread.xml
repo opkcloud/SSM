@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="ThreadPoolMonitorService" class="com.opkcloud.thread.monitor.ThreadPoolMonitorService">
+        <property name="monitoringPeriod" value="100"/>
+    </bean>
+
+    <bean id="rejectedExecutionHandler" class="com.opkcloud.thread.pool.RejectedExecutionHandler"></bean>
+
+    <bean id="threadPoolExecutorService" class="com.opkcloud.thread.pool.ThreadPoolExecutorService">
+        <property name="corePoolSize" value="200"/>
+        <property name="maxPoolSize" value="500"/>
+        <property name="keepAliveTime" value="10"/>
+        <property name="queueCapacity" value="5000"/>
+        <property name="rejectedExecutionHandler" ref="rejectedExecutionHandler"/>
+    </bean>
+
+    <bean id="starter" class="com.opkcloud.thread.Starter" init-method="init" destroy-method="destory">
+        <property name="threadPoolMonitorService" ref="ThreadPoolMonitorService"/>
+        <property name="threadPoolExecutorService" ref="threadPoolExecutorService"/>
+        <property name="timeOut" value="100"/>
+    </bean>
+
+</beans>
