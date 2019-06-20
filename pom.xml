@@ -230,14 +230,14 @@
         
         <!-- tomcat插件 -->
 		<plugin>
-		<groupId>org.apache.tomcat.maven</groupId>
-		<artifactId>tomcat7-maven-plugin</artifactId>
-		<configuration>
-		<!-- 默认访问路径 -->
-		<path>/</path>
-		<!-- 端口 -->
-		<port>8080</port>
-		</configuration>
+          <groupId>org.apache.tomcat.maven</groupId>
+          <artifactId>tomcat7-maven-plugin</artifactId>
+            <configuration>
+            <!-- 默认访问路径 -->
+            <path>/</path>
+            <!-- 端口 -->
+            <port>8080</port>
+          </configuration>
 		</plugin>
       </plugins>
     </pluginManagement>
