@@ -18,7 +18,7 @@
     <!-- 指定spring核心配置文件 -->
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:applicationContext.xml</param-value>
+        <param-value>classpath:applicationContext.xml classpath:spring-thread.xml</param-value>
     </context-param>
 
     <!-- 解决乱码的过滤器 -->
